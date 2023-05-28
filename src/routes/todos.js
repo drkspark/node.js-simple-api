@@ -4,6 +4,7 @@ const router = express.Router();
 
 const idLength = 8;
 
+// Get all Tasks
 router.get('/', (req,res) => {
 
     let todos = req.app.db.get('todos').value();
@@ -12,6 +13,7 @@ router.get('/', (req,res) => {
 
 });
 
+// Get a particular task using the :id
 router.get('/:id', (req,res) => {
 
     let todo = req.app.db.get('todos').find({ 
@@ -33,6 +35,7 @@ router.get('/:id', (req,res) => {
 
 });
 
+// Create a new Task
 router.post('/', (req,res) => {
 
     let todo = {
@@ -52,6 +55,7 @@ router.post('/', (req,res) => {
     }
 });
 
+// This will SET task to Completed
 router.put('/:id', (req,res) => {
 
     //find todo.
