@@ -1,5 +1,13 @@
 module.exports = {
-    tags:{
-        
-    }
-}
+    tags: [
+        {
+            name: "TODO Operations",
+        },
+        {
+            name: "Second Operation",
+        },
+        {
+            name: "Third Operation",
+        },
+    ],
+};
